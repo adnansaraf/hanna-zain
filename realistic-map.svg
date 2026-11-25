@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3EFE6"/>
+      <stop offset="100%" stop-color="#EAE5DA"/>
+    </linearGradient>
+    <filter id="pinShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0E281C" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Map Base Land -->
+  <rect width="600" height="280" fill="url(#mapBg)"/>
+
+  <!-- Greenery / Vegetation Areas -->
+  <path d="M 0 0 C 60 40, 140 30, 200 0 Z" fill="#E2EAD8" opacity="0.8"/>
+  <path d="M 420 0 C 470 50, 530 60, 600 30 L 600 0 Z" fill="#E2EAD8" opacity="0.85"/>
+  <path d="M 0 180 C 80 160, 150 200, 220 280 L 0 280 Z" fill="#E5EDDC" opacity="0.9"/>
+  <path d="M 460 280 C 500 210, 550 200, 600 220 L 600 280 Z" fill="#E2EAD8" opacity="0.8"/>
+
+  <!-- Local Street Blocks -->
+  <rect x="70" y="50" width="90" height="60" rx="6" fill="#EDE7DC" stroke="#DDD5C7" stroke-width="1"/>
+  <rect x="70" y="125" width="90" height="70" rx="6" fill="#EDE7DC" stroke="#DDD5C7" stroke-width="1"/>
+  <rect x="230" y="45" width="120" height="65" rx="6" fill="#EDE7DC" stroke="#DDD5C7" stroke-width="1"/>
+  <rect x="420" y="65" width="110" height="75" rx="6" fill="#EDE7DC" stroke="#DDD5C7" stroke-width="1"/>
+  <rect x="420" y="160" width="110" height="60" rx="6" fill="#EDE7DC" stroke="#DDD5C7" stroke-width="1"/>
+
+  <!-- Secondary Streets (Grey/White Grid) -->
+  <path d="M 30 20 L 570 20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M 30 20 L 570 20" stroke="#D8CEBD" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+  <path d="M 50 118 L 560 118" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M 50 118 L 560 118" stroke="#D8CEBD" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <path d="M 60 210 L 550 210" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M 60 210 L 550 210" stroke="#D8CEBD" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+  <path d="M 180 10 L 180 270" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M 180 10 L 180 270" stroke="#D8CEBD" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <path d="M 390 10 L 390 270" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M 390 10 L 390 270" stroke="#D8CEBD" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Main State Highway (SH-39 / Ooty Road) - Prominent Orange/Gold Highway -->
+  <path d="M 10 260 C 140 220, 240 180, 300 135 C 360 90, 480 50, 590 30" stroke="#F6D07B" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M 10 260 C 140 220, 240 180, 300 135 C 360 90, 480 50, 590 30" stroke="#E6A838" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round" fill="none"/>
+
+  <!-- Road Label -->
+  <rect x="420" y="32" width="125" height="18" rx="4" fill="#FFFFFF" opacity="0.9" stroke="#E6A838" stroke-width="1"/>
+  <text x="482" y="45" font-family="'Jost', system-ui, sans-serif" font-size="9" font-weight="600" fill="#6B4D16" text-anchor="middle" letter-spacing="1">SH-39 · OOTY RD</text>
+
+  <!-- Poopalam Area Label -->
+  <text x="210" y="245" font-family="'Jost', system-ui, sans-serif" font-size="12" font-weight="600" fill="#8C7E6C" letter-spacing="2">POOPALAM</text>
+
+  <!-- Venue Grounds (Presidency Convention Center Area) -->
+  <rect x="260" y="115" width="85" height="70" rx="8" fill="#E8E2D3" stroke="#C5A566" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="302" y="176" font-family="'Jost', system-ui, sans-serif" font-size="8" font-weight="600" fill="#163E2B" text-anchor="middle" letter-spacing="0.5">CONVENTION CENTER</text>
+
+  <!-- Pulsing Pin Circles -->
+  <circle cx="302" cy="135" r="28" fill="#163E2B" opacity="0.12"/>
+  <circle cx="302" cy="135" r="18" fill="#163E2B" opacity="0.2"/>
+
+  <!-- Location Drop Pin -->
+  <g transform="translate(286, 96)" filter="url(#pinShadow)">
+    <path d="M 16 0 C 7.2 0, 0 7.2, 0 16 C 0 26, 16 40, 16 40 C 16 40, 32 26, 32 16 C 32 7.2, 24.8 0, 16 0 Z" fill="#163E2B"/>
+    <circle cx="16" cy="15" r="6" fill="#C5A566"/>
+  </g>
+
+  <!-- Venue Label Callout Box -->
+  <g transform="translate(195, 62)" filter="url(#pinShadow)">
+    <rect width="215" height="32" rx="16" fill="#FFFFFF" stroke="#C5A566" stroke-width="1.2"/>
+    <text x="107" y="20" font-family="'Jost', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#163E2B" text-anchor="middle" letter-spacing="0.5">Presidency Convention Center</text>
+  </g>
+
+  <!-- Map UI Controls (Zoom buttons & Scale for realism) -->
+  <g transform="translate(555, 200)">
+    <rect width="28" height="52" rx="4" fill="#FFFFFF" stroke="#DDD5C7" stroke-width="1" filter="url(#pinShadow)"/>
+    <text x="14" y="21" font-family="sans-serif" font-size="16" font-weight="bold" fill="#666" text-anchor="middle">+</text>
+    <line x1="4" y1="26" x2="24" y2="26" stroke="#EEE" stroke-width="1"/>
+    <text x="14" y="44" font-family="sans-serif" font-size="18" font-weight="bold" fill="#666" text-anchor="middle">−</text>
+  </g>
+
+  <g transform="translate(20, 252)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#7A6F64" stroke-width="2"/>
+    <line x1="0" y1="-4" x2="0" y2="4" stroke="#7A6F64" stroke-width="2"/>
+    <line x1="60" y1="-4" x2="60" y2="4" stroke="#7A6F64" stroke-width="2"/>
+    <text x="30" y="-5" font-family="'Jost', system-ui, sans-serif" font-size="8" fill="#7A6F64" text-anchor="middle">500 m</text>
+  </g>
+</svg>
